@@ -1,0 +1,34 @@
+# digg_10:
+  # mc_path: 'data/mc.csv'
+rating_path: 'data/ordered_data/votes.csv'   
+user_path: 'data/ordered_data/friends.csv'   
+# save_dir: 'digg_1/run1_linear_10%.pt'
+# save_dir: 'digg_10/run1_linear_10%.pt'
+# save_pr: 'save_fig/run1_digg_test_1%.pt'
+
+seed: 2020
+
+layer: 1
+act: 'Tanh'
+# act: 'Sigmoid'
+# act: 'ReLu'
+inter_dim: 32
+emb_dim: 32
+
+train_ratio: 0.8
+val_ratio: 0.1
+batch_size: 200
+epochs: 3
+lr: 0.001
+weight_decay: 0.0001
+decay_w: 0.5
+# decay_method: 'log_decay'
+# decay_method: 'exp_decay'
+decay_method: 'rev_decay'
+drop: 0.2
+
+use_propagation: True
+if_injected_train: True
+svm_classifier: False
+
+clip: 1.0
