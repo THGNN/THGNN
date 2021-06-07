@@ -27,10 +27,7 @@ from anomaly_generation_test import main_test
 from anomaly_generation_all import main_all
 
 class Logger(object):
-    """
-    这个类的目的是尽可能不改变原始代码的情况下, 使得程序的输出同时打印在控制台和保存在文件中
-    用法: 只需在程序中加入一行 `sys.stdout = Logger(log_file_path)` 即可
-    """
+   
     def __init__(self, file_path):
         self.terminal = sys.stdout
         self.log = open(file_path, "a")
